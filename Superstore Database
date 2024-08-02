@@ -1,3 +1,4 @@
+SCHEMA table for Superstore
 CREATE TABLE superstore (
     item_id INTEGER PRIMARY KEY,
     item_name TEXT,
@@ -24,3 +25,37 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+# SQL query examples created.
+
+#1. 
+SELECT * FROM superstore;
+
+#2. 
+SELECT * 
+FROM superstore
+LIMIT 5;
+
+#3.
+SELECT item_name, price
+FROM superstore
+ORDER by price;
+
+#4.
+SELECT *
+FROM superstore
+ORDER BY price DESC;
+
+#5.
+SELECT *
+FROM superstore
+WHERE category = 'Kitchen Supplies';
+
+#6.
+SELECT category, item_name, stock_quantity
+FROM superstore
+WHERE item_name = 'Air Purifier';
+
+#7.
+SELECT DISTINCT item_name
+FROM superstore;
