@@ -1,3 +1,4 @@
+SCHEMA table example for ECom_Data
 CREATE TABLE ecom_data (
     user_id VARCHAR(50),
     session_duration INT,
@@ -20,3 +21,13 @@ VALUES
     ('zN53qR345321', 6, 1, 75.20, 'Smartphone Case'),
     ('QrSFgH561764', 1, 1, 50.00, 'Bluetooth Speaker'),
     ('cDeFgH567890', 4, 1, 150.75, 'Smartwatch');
+
+# SQL queries examples created.
+#1. SELECT * FROM ecom_data;
+
+#2. SELECT SUM(session_duration)
+FROM ecom_data;
+
+#3. SELECT SUM(session_duration), item_name
+FROM ecom_data
+GROUP BY item_name;
